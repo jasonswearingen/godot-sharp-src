@@ -7,7 +7,7 @@ using Godot.NativeInterop;
 
 #nullable disable
 /// <summary>
-/// <para>The <see cref="Godot.Json"/> enables all data types to be converted to and from a JSON string. This useful for serializing data to save to a file or send over the network.</para>
+/// <para>The <see cref="Godot.Json"/> class enables all data types to be converted to and from a JSON string. This is useful for serializing data, e.g. to save to a file or send over the network.</para>
 /// <para><see cref="Godot.Json.Stringify(Variant, string, bool, bool)"/> is used to convert any data type into a JSON string.</para>
 /// <para><see cref="Godot.Json.Parse(string, bool)"/> is used to convert any existing JSON data into a <see cref="Godot.Variant"/> that can be used within Godot. If successfully parsed, use <see cref="Godot.Json.Data"/> to retrieve the <see cref="Godot.Variant"/>, and use <c>typeof</c> to check if the Variant's type is what you expect. JSON Objects are converted into a <see cref="Godot.Collections.Dictionary"/>, but JSON data can be used to store <see cref="Godot.Collections.Array"/>s, numbers, <see cref="string"/>s and even just a boolean.</para>
 /// <para><b>Example</b></para>
@@ -28,7 +28,7 @@ using Godot.NativeInterop;
 /// else:
 ///     print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
 /// </code></para>
-/// <para>Alternatively, you can parse string using the static <see cref="Godot.Json.ParseString(string)"/> method, but it doesn't allow to handle errors.</para>
+/// <para>Alternatively, you can parse strings using the static <see cref="Godot.Json.ParseString(string)"/> method, but it doesn't handle errors.</para>
 /// <para><code>
 /// var data = JSON.parse_string(json_string) # Returns null if parsing failed.
 /// </code></para>
@@ -80,7 +80,7 @@ public partial class Json : Resource
     /// <para>Converts a <see cref="Godot.Variant"/> var to JSON text and returns the result. Useful for serializing data to store or send over the network.</para>
     /// <para><b>Note:</b> The JSON specification does not define integer or float types, but only a <i>number</i> type. Therefore, converting a Variant to JSON text will convert all numerical values to <see cref="float"/> types.</para>
     /// <para><b>Note:</b> If <paramref name="fullPrecision"/> is <see langword="true"/>, when stringifying floats, the unreliable digits are stringified in addition to the reliable digits to guarantee exact decoding.</para>
-    /// <para>The <paramref name="indent"/> parameter controls if and how something is indented, the string used for this parameter will be used where there should be an indent in the output, even spaces like <c>"   "</c> will work. <c>\t</c> and <c>\n</c> can also be used for a tab indent, or to make a newline for each indent respectively.</para>
+    /// <para>The <paramref name="indent"/> parameter controls if and how something is indented; its contents will be used where there should be an indent in the output. Even spaces like <c>"   "</c> will work. <c>\t</c> and <c>\n</c> can also be used for a tab indent, or to make a newline for each indent respectively.</para>
     /// <para><b>Example output:</b></para>
     /// <para><code>
     /// ## JSON.stringify(my_dictionary)
@@ -140,7 +140,7 @@ public partial class Json : Resource
 
     /// <summary>
     /// <para>Attempts to parse the <paramref name="jsonText"/> provided.</para>
-    /// <para>Returns an <see cref="Godot.Error"/>. If the parse was successful, it returns <see cref="Godot.Error.Ok"/> and the result can be retrieved using <see cref="Godot.Json.Data"/>. If unsuccessful, use <see cref="Godot.Json.GetErrorLine()"/> and <see cref="Godot.Json.GetErrorMessage()"/> for identifying the source of the failure.</para>
+    /// <para>Returns an <see cref="Godot.Error"/>. If the parse was successful, it returns <see cref="Godot.Error.Ok"/> and the result can be retrieved using <see cref="Godot.Json.Data"/>. If unsuccessful, use <see cref="Godot.Json.GetErrorLine()"/> and <see cref="Godot.Json.GetErrorMessage()"/> to identify the source of the failure.</para>
     /// <para>Non-static variant of <see cref="Godot.Json.ParseString(string)"/>, if you want custom error handling.</para>
     /// <para>The optional <paramref name="keepText"/> argument instructs the parser to keep a copy of the original text. This text can be obtained later by using the <see cref="Godot.Json.GetParsedText()"/> function and is used when saving the resource (instead of generating new text from <see cref="Godot.Json.Data"/>).</para>
     /// </summary>
@@ -171,7 +171,7 @@ public partial class Json : Resource
     private static readonly IntPtr MethodBind5 = ClassDB_get_method_with_compatibility(NativeName, MethodName.GetParsedText, 201670096ul);
 
     /// <summary>
-    /// <para>Return the text parsed by <see cref="Godot.Json.Parse(string, bool)"/> as long as the function is instructed to keep it.</para>
+    /// <para>Return the text parsed by <see cref="Godot.Json.Parse(string, bool)"/> (requires passing <c>keep_text</c> to <see cref="Godot.Json.Parse(string, bool)"/>).</para>
     /// </summary>
     public string GetParsedText()
     {

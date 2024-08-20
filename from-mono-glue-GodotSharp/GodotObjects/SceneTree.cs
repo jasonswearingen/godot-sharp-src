@@ -539,7 +539,7 @@ public partial class SceneTree : MainLoop
     private static readonly IntPtr MethodBind29 = ClassDB_get_method_with_compatibility(NativeName, MethodName.NotifyGroup, 2415702435ul);
 
     /// <summary>
-    /// <para>Calls <see cref="Godot.GodotObject.Notification(int, bool)"/> with the given <paramref name="notification"/> to all nodes inside this tree added to the <paramref name="group"/>. See also <see cref="Godot.SceneTree.CallGroup(StringName, StringName, Variant[])"/> and <see cref="Godot.SceneTree.SetGroup(StringName, string, Variant)"/>.</para>
+    /// <para>Calls <see cref="Godot.GodotObject.Notification(int, bool)"/> with the given <paramref name="notification"/> to all nodes inside this tree added to the <paramref name="group"/>. See also <a href="$DOCS_URL/tutorials/best_practices/godot_notifications.html">Godot notifications</a> and <see cref="Godot.SceneTree.CallGroup(StringName, StringName, Variant[])"/> and <see cref="Godot.SceneTree.SetGroup(StringName, string, Variant)"/>.</para>
     /// <para><b>Note:</b> This method acts immediately on all selected nodes at once, which may cause stuttering in some performance-intensive situations.</para>
     /// </summary>
     public void NotifyGroup(StringName group, int notification)

@@ -208,10 +208,6 @@ public partial class Animation : Resource
         {
             return IsCaptureIncluded();
         }
-        set
-        {
-            _SetCaptureIncluded(value);
-        }
     }
 
     private static readonly System.Type CachedType = typeof(Animation);
@@ -1037,25 +1033,16 @@ public partial class Animation : Resource
     }
 
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-    private static readonly IntPtr MethodBind73 = ClassDB_get_method_with_compatibility(NativeName, MethodName._SetCaptureIncluded, 2586408642ul);
-
-    [EditorBrowsable(EditorBrowsableState.Never)]
-    internal void _SetCaptureIncluded(bool captureIncluded)
-    {
-        NativeCalls.godot_icall_1_41(MethodBind73, GodotObject.GetPtr(this), captureIncluded.ToGodotBool());
-    }
-
-    [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-    private static readonly IntPtr MethodBind74 = ClassDB_get_method_with_compatibility(NativeName, MethodName.IsCaptureIncluded, 36873697ul);
+    private static readonly IntPtr MethodBind73 = ClassDB_get_method_with_compatibility(NativeName, MethodName.IsCaptureIncluded, 36873697ul);
 
     [EditorBrowsable(EditorBrowsableState.Never)]
     public bool IsCaptureIncluded()
     {
-        return NativeCalls.godot_icall_0_40(MethodBind74, GodotObject.GetPtr(this)).ToBool();
+        return NativeCalls.godot_icall_0_40(MethodBind73, GodotObject.GetPtr(this)).ToBool();
     }
 
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-    private static readonly IntPtr MethodBind75 = ClassDB_get_method_with_compatibility(NativeName, MethodName.TrackFindKey, 3245197284ul);
+    private static readonly IntPtr MethodBind74 = ClassDB_get_method_with_compatibility(NativeName, MethodName.TrackFindKey, 3245197284ul);
 
     /// <summary>
     /// <para>Finds the key index by time in a given track. Optionally, only find it if the approx/exact time is given.</para>
@@ -1066,11 +1053,11 @@ public partial class Animation : Resource
     [EditorBrowsable(EditorBrowsableState.Never)]
     public int TrackFindKey(int trackIdx, double time, Animation.FindMode findMode)
     {
-        return NativeCalls.godot_icall_3_104(MethodBind75, GodotObject.GetPtr(this), trackIdx, time, (int)findMode);
+        return NativeCalls.godot_icall_3_104(MethodBind74, GodotObject.GetPtr(this), trackIdx, time, (int)findMode);
     }
 
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-    private static readonly IntPtr MethodBind76 = ClassDB_get_method_with_compatibility(NativeName, MethodName.ValueTrackInterpolate, 491147702ul);
+    private static readonly IntPtr MethodBind75 = ClassDB_get_method_with_compatibility(NativeName, MethodName.ValueTrackInterpolate, 491147702ul);
 
     /// <summary>
     /// <para>Returns the interpolated value at the given time (in seconds). The <paramref name="trackIdx"/> must be the index of a value track.</para>
@@ -1079,11 +1066,11 @@ public partial class Animation : Resource
     [EditorBrowsable(EditorBrowsableState.Never)]
     public Variant ValueTrackInterpolate(int trackIdx, double timeSec)
     {
-        return NativeCalls.godot_icall_2_105(MethodBind76, GodotObject.GetPtr(this), trackIdx, timeSec);
+        return NativeCalls.godot_icall_2_105(MethodBind75, GodotObject.GetPtr(this), trackIdx, timeSec);
     }
 
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-    private static readonly IntPtr MethodBind77 = ClassDB_get_method_with_compatibility(NativeName, MethodName.BlendShapeTrackInterpolate, 1900462983ul);
+    private static readonly IntPtr MethodBind76 = ClassDB_get_method_with_compatibility(NativeName, MethodName.BlendShapeTrackInterpolate, 1900462983ul);
 
     /// <summary>
     /// <para>Returns the interpolated blend shape value at the given time (in seconds). The <paramref name="trackIdx"/> must be the index of a blend shape track.</para>
@@ -1091,11 +1078,11 @@ public partial class Animation : Resource
     [EditorBrowsable(EditorBrowsableState.Never)]
     public float BlendShapeTrackInterpolate(int trackIdx, double timeSec)
     {
-        return NativeCalls.godot_icall_2_97(MethodBind77, GodotObject.GetPtr(this), trackIdx, timeSec);
+        return NativeCalls.godot_icall_2_97(MethodBind76, GodotObject.GetPtr(this), trackIdx, timeSec);
     }
 
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-    private static readonly IntPtr MethodBind78 = ClassDB_get_method_with_compatibility(NativeName, MethodName.ScaleTrackInterpolate, 3285246857ul);
+    private static readonly IntPtr MethodBind77 = ClassDB_get_method_with_compatibility(NativeName, MethodName.ScaleTrackInterpolate, 3285246857ul);
 
     /// <summary>
     /// <para>Returns the interpolated scale value at the given time (in seconds). The <paramref name="trackIdx"/> must be the index of a 3D scale track.</para>
@@ -1103,11 +1090,11 @@ public partial class Animation : Resource
     [EditorBrowsable(EditorBrowsableState.Never)]
     public Vector3 ScaleTrackInterpolate(int trackIdx, double timeSec)
     {
-        return NativeCalls.godot_icall_2_106(MethodBind78, GodotObject.GetPtr(this), trackIdx, timeSec);
+        return NativeCalls.godot_icall_2_106(MethodBind77, GodotObject.GetPtr(this), trackIdx, timeSec);
     }
 
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-    private static readonly IntPtr MethodBind79 = ClassDB_get_method_with_compatibility(NativeName, MethodName.RotationTrackInterpolate, 1988711975ul);
+    private static readonly IntPtr MethodBind78 = ClassDB_get_method_with_compatibility(NativeName, MethodName.RotationTrackInterpolate, 1988711975ul);
 
     /// <summary>
     /// <para>Returns the interpolated rotation value at the given time (in seconds). The <paramref name="trackIdx"/> must be the index of a 3D rotation track.</para>
@@ -1115,11 +1102,11 @@ public partial class Animation : Resource
     [EditorBrowsable(EditorBrowsableState.Never)]
     public Quaternion RotationTrackInterpolate(int trackIdx, double timeSec)
     {
-        return NativeCalls.godot_icall_2_107(MethodBind79, GodotObject.GetPtr(this), trackIdx, timeSec);
+        return NativeCalls.godot_icall_2_107(MethodBind78, GodotObject.GetPtr(this), trackIdx, timeSec);
     }
 
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-    private static readonly IntPtr MethodBind80 = ClassDB_get_method_with_compatibility(NativeName, MethodName.PositionTrackInterpolate, 3285246857ul);
+    private static readonly IntPtr MethodBind79 = ClassDB_get_method_with_compatibility(NativeName, MethodName.PositionTrackInterpolate, 3285246857ul);
 
     /// <summary>
     /// <para>Returns the interpolated position value at the given time (in seconds). The <paramref name="trackIdx"/> must be the index of a 3D position track.</para>
@@ -1127,7 +1114,7 @@ public partial class Animation : Resource
     [EditorBrowsable(EditorBrowsableState.Never)]
     public Vector3 PositionTrackInterpolate(int trackIdx, double timeSec)
     {
-        return NativeCalls.godot_icall_2_106(MethodBind80, GodotObject.GetPtr(this), trackIdx, timeSec);
+        return NativeCalls.godot_icall_2_106(MethodBind79, GodotObject.GetPtr(this), trackIdx, timeSec);
     }
 
     /// <summary>
@@ -1489,10 +1476,6 @@ public partial class Animation : Resource
         /// Cached name for the 'compress' method.
         /// </summary>
         public static readonly StringName Compress = "compress";
-        /// <summary>
-        /// Cached name for the '_set_capture_included' method.
-        /// </summary>
-        public static readonly StringName _SetCaptureIncluded = "_set_capture_included";
         /// <summary>
         /// Cached name for the 'is_capture_included' method.
         /// </summary>

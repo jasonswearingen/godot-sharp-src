@@ -11,7 +11,7 @@ using Godot.NativeInterop;
 /// <para>For performance reasons, all TileMap updates are batched at the end of a frame. Notably, this means that scene tiles from a <see cref="Godot.TileSetScenesCollectionSource"/> may be initialized after their parent. This is only queued when inside the scene tree.</para>
 /// <para>To force an update earlier on, call <see cref="Godot.TileMap.UpdateInternals()"/>.</para>
 /// </summary>
-[Obsolete("Use multiple 'TileMapLayer' nodes instead.")]
+[Obsolete("Use multiple 'TileMapLayer' nodes instead. To convert a TileMap to a set of TileMapLayer nodes, open the TileMap bottom panel with the node selected, click the toolbox icon in the top-right corner and choose 'Extract TileMap layers as individual TileMapLayer nodes'.")]
 public partial class TileMap : Node2D
 {
     public enum VisibilityMode : long

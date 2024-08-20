@@ -385,6 +385,7 @@ public partial class MultiMesh : Resource
 
     /// <summary>
     /// <para>Sets the color of a specific instance by <i>multiplying</i> the mesh's existing vertex colors. This allows for different color tinting per instance.</para>
+    /// <para><b>Note:</b> Each component is stored in 32 bits in the Forward+ and Mobile rendering methods, but is packed into 16 bits in the Compatibility rendering method.</para>
     /// <para>For the color to take effect, ensure that <see cref="Godot.MultiMesh.UseColors"/> is <see langword="true"/> on the <see cref="Godot.MultiMesh"/> and <see cref="Godot.BaseMaterial3D.VertexColorUseAsAlbedo"/> is <see langword="true"/> on the material. If you intend to set an absolute color instead of tinting, make sure the material's albedo color is set to pure white (<c>Color(1, 1, 1)</c>).</para>
     /// </summary>
     public unsafe void SetInstanceColor(int instance, Color color)
@@ -408,6 +409,7 @@ public partial class MultiMesh : Resource
 
     /// <summary>
     /// <para>Sets custom data for a specific instance. <paramref name="customData"/> is a <see cref="Godot.Color"/> type only to contain 4 floating-point numbers.</para>
+    /// <para><b>Note:</b> Each number is stored in 32 bits in the Forward+ and Mobile rendering methods, but is packed into 16 bits in the Compatibility rendering method.</para>
     /// <para>For the custom data to be used, ensure that <see cref="Godot.MultiMesh.UseCustomData"/> is <see langword="true"/>.</para>
     /// <para>This custom instance data has to be manually accessed in your custom shader using <c>INSTANCE_CUSTOM</c>.</para>
     /// </summary>

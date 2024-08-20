@@ -1881,6 +1881,9 @@ public partial class Window : Viewport
 
     /// <summary>
     /// <para>Shows the <see cref="Godot.Window"/> and makes it transient (see <see cref="Godot.Window.Transient"/>). If <paramref name="rect"/> is provided, it will be set as the <see cref="Godot.Window"/>'s size. Fails if called on the main window.</para>
+    /// <para>If <c>ProjectSettings.display/window/subwindows/embed_subwindows</c> is <see langword="true"/> (single-window mode), <paramref name="rect"/>'s coordinates are global and relative to the main window's top-left corner (excluding window decorations). If <paramref name="rect"/>'s position coordinates are negative, the window will be located outside the main window and may not be visible as a result.</para>
+    /// <para>If <c>ProjectSettings.display/window/subwindows/embed_subwindows</c> is <see langword="false"/> (multi-window mode), <paramref name="rect"/>'s coordinates are global and relative to the top-left corner of the leftmost screen. If <paramref name="rect"/>'s position coordinates are negative, the window will be placed at the top-left corner of the screen.</para>
+    /// <para><b>Note:</b> <paramref name="rect"/> must be in global coordinates if specified.</para>
     /// </summary>
     /// <param name="rect">If the parameter is null, then the default value is <c>new Rect2I(new Vector2I(0, 0), new Vector2I(0, 0))</c>.</param>
     public unsafe void Popup(Nullable<Rect2I> rect = null)

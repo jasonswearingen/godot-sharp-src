@@ -7,7 +7,7 @@ using Godot.NativeInterop;
 
 #nullable disable
 /// <summary>
-/// <para><see cref="Godot.VisibleOnScreenEnabler2D"/> represents a rectangular region of 2D space. When any part of this region becomes visible on screen or in a viewport, it will emit a <see cref="Godot.VisibleOnScreenNotifier2D.ScreenEntered"/> signal, and likewise it will emit a <see cref="Godot.VisibleOnScreenNotifier2D.ScreenExited"/> signal when no part of it remains visible.</para>
+/// <para><see cref="Godot.VisibleOnScreenNotifier2D"/> represents a rectangular region of 2D space. When any part of this region becomes visible on screen or in a viewport, it will emit a <see cref="Godot.VisibleOnScreenNotifier2D.ScreenEntered"/> signal, and likewise it will emit a <see cref="Godot.VisibleOnScreenNotifier2D.ScreenExited"/> signal when no part of it remains visible.</para>
 /// <para>If you want a node to be enabled automatically when this region is visible on screen, use <see cref="Godot.VisibleOnScreenEnabler2D"/>.</para>
 /// <para><b>Note:</b> <see cref="Godot.VisibleOnScreenNotifier2D"/> uses the render culling code to determine whether it's visible on screen, so it won't function unless <see cref="Godot.CanvasItem.Visible"/> is set to <see langword="true"/>.</para>
 /// </summary>

@@ -118,6 +118,7 @@ public partial class AnimationNodeAnimation : AnimationRootNode
 
     /// <summary>
     /// <para>If <see cref="Godot.AnimationNodeAnimation.UseCustomTimeline"/> is <see langword="true"/>, override the loop settings of the original <see cref="Godot.Animation"/> resource with the value.</para>
+    /// <para><b>Note:</b> If the <see cref="Godot.Animation.LoopMode"/> isn't set to looping, the <see cref="Godot.Animation.TrackSetInterpolationLoopWrap(int, bool)"/> option will not be respected. If you cannot get the expected behavior, consider duplicating the <see cref="Godot.Animation"/> resource and changing the loop settings.</para>
     /// </summary>
     public Animation.LoopModeEnum LoopMode
     {

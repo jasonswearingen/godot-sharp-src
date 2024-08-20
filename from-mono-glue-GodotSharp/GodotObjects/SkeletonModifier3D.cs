@@ -9,7 +9,7 @@ using Godot.NativeInterop;
 /// <summary>
 /// <para><see cref="Godot.SkeletonModifier3D"/> retrieves a target <see cref="Godot.Skeleton3D"/> by having a <see cref="Godot.Skeleton3D"/> parent.</para>
 /// <para>If there is <see cref="Godot.AnimationMixer"/>, modification always performs after playback process of the <see cref="Godot.AnimationMixer"/>.</para>
-/// <para>This node should be used to implement custom IK solvers, constraints, or skeleton physics</para>
+/// <para>This node should be used to implement custom IK solvers, constraints, or skeleton physics.</para>
 /// </summary>
 public partial class SkeletonModifier3D : Node3D
 {

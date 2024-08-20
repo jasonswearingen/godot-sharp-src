@@ -7,7 +7,7 @@ using Godot.NativeInterop;
 
 #nullable disable
 /// <summary>
-/// <para>InputEventShortcut is a special event that can be received in <see cref="Godot.Node._UnhandledKeyInput(InputEvent)"/>. It is typically sent by the editor's Command Palette to trigger actions, but can also be sent manually using <see cref="Godot.Viewport.PushInput(InputEvent, bool)"/>.</para>
+/// <para>InputEventShortcut is a special event that can be received in <see cref="Godot.Node._Input(InputEvent)"/>, <see cref="Godot.Node._ShortcutInput(InputEvent)"/>, and <see cref="Godot.Node._UnhandledInput(InputEvent)"/>. It is typically sent by the editor's Command Palette to trigger actions, but can also be sent manually using <see cref="Godot.Viewport.PushInput(InputEvent, bool)"/>.</para>
 /// </summary>
 public partial class InputEventShortcut : InputEvent
 {

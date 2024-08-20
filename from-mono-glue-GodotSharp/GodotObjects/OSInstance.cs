@@ -447,6 +447,7 @@ public partial class OSInstance : GodotObject
     /// <summary>
     /// <para>Returns the exit code of a spawned process once it has finished running (see <see cref="Godot.OSInstance.IsProcessRunning(int)"/>).</para>
     /// <para>Returns <c>-1</c> if the <paramref name="pid"/> is not a PID of a spawned child process, the process is still running, or the method is not implemented for the current platform.</para>
+    /// <para><b>Note:</b> Returns <c>-1</c> if the <paramref name="pid"/> is a macOS bundled app process.</para>
     /// <para><b>Note:</b> This method is implemented on Android, Linux, macOS and Windows.</para>
     /// </summary>
     public int GetProcessExitCode(int pid)

@@ -269,7 +269,7 @@ public partial class GodotObject
     /// 
     ///     public override void _ValidateProperty(Godot.Collections.Dictionary property)
     ///     {
-    ///         if (property["name"].AsStringName() == PropertyName.Number &amp;&amp; IsNumberEditable)
+    ///         if (property["name"].AsStringName() == PropertyName.Number &amp;&amp; !IsNumberEditable)
     ///         {
     ///             var usage = property["usage"].As&lt;PropertyUsageFlags&gt;() | PropertyUsageFlags.ReadOnly;
     ///             property["usage"] = (int)usage;

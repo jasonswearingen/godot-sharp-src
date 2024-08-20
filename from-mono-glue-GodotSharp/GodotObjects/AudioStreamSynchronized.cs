@@ -12,7 +12,7 @@ using Godot.NativeInterop;
 public partial class AudioStreamSynchronized : AudioStream
 {
     /// <summary>
-    /// <para>Maximum amount of streams that can be synchrohized.</para>
+    /// <para>Maximum amount of streams that can be synchronized.</para>
     /// </summary>
     public const long MaxStreams = 32;
 

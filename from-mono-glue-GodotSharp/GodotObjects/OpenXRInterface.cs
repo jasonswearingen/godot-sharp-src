@@ -703,7 +703,7 @@ public partial class OpenXRInterface : XRInterface
 
     /// <summary>
     /// <para>Informs the user the HMD refresh rate has changed.</para>
-    /// <para><b>Node:</b> Only emitted if XR runtime supports the refresh rate extension.</para>
+    /// <para><b>Note:</b> Only emitted if XR runtime supports the refresh rate extension.</para>
     /// </summary>
     public unsafe event RefreshRateChangedEventHandler RefreshRateChanged
     {

@@ -479,7 +479,7 @@ public partial class AnimationMixer : Node
     /// <para>See also <see cref="Godot.AnimationMixer.RootMotionTrack"/> and <see cref="Godot.RootMotionView"/>.</para>
     /// <para>The most basic example is applying position to <see cref="Godot.CharacterBody3D"/>:</para>
     /// <para></para>
-    /// <para>By using this in combination with <see cref="Godot.AnimationMixer.GetRootMotionPositionAccumulator()"/>, you can apply the root motion position more correctly to account for the rotation of the node.</para>
+    /// <para>By using this in combination with <see cref="Godot.AnimationMixer.GetRootMotionRotationAccumulator()"/>, you can apply the root motion position more correctly to account for the rotation of the node.</para>
     /// <para></para>
     /// </summary>
     public Vector3 GetRootMotionPosition()

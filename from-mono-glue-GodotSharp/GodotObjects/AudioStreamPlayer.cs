@@ -8,7 +8,7 @@ using Godot.NativeInterop;
 #nullable disable
 /// <summary>
 /// <para>The <see cref="Godot.AudioStreamPlayer"/> node plays an audio stream non-positionally. It is ideal for user interfaces, menus, or background music.</para>
-/// <para>To use this node, <see cref="Godot.AudioStreamPlayer.Stream"/> needs to be set to a valid <see cref="Godot.AudioStream"/> resource. Playing more than one sound at the time is also supported, see <see cref="Godot.AudioStreamPlayer.MaxPolyphony"/>.</para>
+/// <para>To use this node, <see cref="Godot.AudioStreamPlayer.Stream"/> needs to be set to a valid <see cref="Godot.AudioStream"/> resource. Playing more than one sound at the same time is also supported, see <see cref="Godot.AudioStreamPlayer.MaxPolyphony"/>.</para>
 /// <para>If you need to play audio at a specific position, use <see cref="Godot.AudioStreamPlayer2D"/> or <see cref="Godot.AudioStreamPlayer3D"/> instead.</para>
 /// </summary>
 public partial class AudioStreamPlayer : Node

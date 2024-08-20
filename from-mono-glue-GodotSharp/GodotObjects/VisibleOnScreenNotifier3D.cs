@@ -7,7 +7,7 @@ using Godot.NativeInterop;
 
 #nullable disable
 /// <summary>
-/// <para><see cref="Godot.VisibleOnScreenEnabler3D"/> represents a box-shaped region of 3D space. When any part of this region becomes visible on screen or in a <see cref="Godot.Camera3D"/>'s view, it will emit a <see cref="Godot.VisibleOnScreenNotifier3D.ScreenEntered"/> signal, and likewise it will emit a <see cref="Godot.VisibleOnScreenNotifier3D.ScreenExited"/> signal when no part of it remains visible.</para>
+/// <para><see cref="Godot.VisibleOnScreenNotifier3D"/> represents a box-shaped region of 3D space. When any part of this region becomes visible on screen or in a <see cref="Godot.Camera3D"/>'s view, it will emit a <see cref="Godot.VisibleOnScreenNotifier3D.ScreenEntered"/> signal, and likewise it will emit a <see cref="Godot.VisibleOnScreenNotifier3D.ScreenExited"/> signal when no part of it remains visible.</para>
 /// <para>If you want a node to be enabled automatically when this region is visible on screen, use <see cref="Godot.VisibleOnScreenEnabler3D"/>.</para>
 /// <para><b>Note:</b> <see cref="Godot.VisibleOnScreenNotifier3D"/> uses an approximate heuristic that doesn't take walls and other occlusion into account, unless occlusion culling is used. It also won't function unless <see cref="Godot.Node3D.Visible"/> is set to <see langword="true"/>.</para>
 /// </summary>
